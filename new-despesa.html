@@ -17,7 +17,8 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
 
     <link rel="stylesheet" href="css/home.css" />
-    <title>Home</title>
+    <link rel="stylesheet" href="css/new-despesa.css" />
+    <title>Nova Despesa</title>
 </head>
 
 <body>
@@ -45,7 +46,7 @@
             </button>
 
             <div class="sidebar">
-                <a href="#" class="active">
+                <a href="home.html">
                     <span class="material-symbols-rounded">dashboard</span>
                     <h4>Dashboard</h4>
                 </a>
@@ -65,7 +66,7 @@
                     <span class="material-symbols-rounded">trophy</span>
                     <h4>Metas</h4>
                 </a>
-                <a href="new-despesa.html">
+                <a href="new-despesa.html" class="active">
                     <span class="material-symbols-rounded">trending_up</span>
                     <h4>Nova despesa</h4>
                 </a>
@@ -77,7 +78,65 @@
         </aside>
 
         <section class="section-new-despesa">
-
+            <div class="value-despesa">
+                <span>Valor da despesa</span>
+                <h1>R$ 0,00</h1>
+            </div>
+            <form action="#" class="form-new-despesa">
+                <div class="label-input">
+                    <input type="text" placeholder="Pago:" id="input-text">
+                    <div class="checkbox">
+                        <input type="checkbox" id="toggle-input">
+                        <label for="toggle-input" id="toggle-label"></label>
+                    </div>
+                </div>
+                <div class="label-input">
+                    <input type="text" placeholder="Valor fixo: Se sim, insira o valor.." id="input-text">
+                    <div class="checkbox">
+                        <input type="checkbox" id="toggle-input2">
+                        <label for="toggle-input2" id="toggle-label2"></label>
+                    </div>
+                </div>
+                <div class="banner-store">
+                    <div class="banner">
+                        <img src="./img/bookmark.svg" alt="">
+                    </div>
+                    <div class="store">
+                        <img src="./img/shopping_bag.svg" alt="">
+                        <span>Lojas</span>
+                    </div>
+                </div>
+                <div class="label-input">
+                    <input type="text" placeholder="Despesa parcelada:" id="input-text">
+                    <div class="checkbox">
+                        <input type="checkbox" id="toggle-input3">
+                        <label for="toggle-input3" id="toggle-label3"></label>
+                    </div>
+                </div>
+                <div class="label-input">
+                    <input type="text" placeholder="Forma de pagamento:" id="input-text">
+                    <div class="wallet-carteira">
+                        <img src="./img/wallet.svg" alt="">
+                        <label type="text" id="toggle-label-carteira">
+                            Carteira
+                        </label>
+                    </div>
+                </div>
+                <div class="options">
+                    <div class="option option-one selected">
+                        <span>Hoje</span>
+                    </div>
+                    <div class="option option-two">
+                        <span>Ontem</span>
+                    </div>
+                    <div class="option option-tree">
+                        <span>Outro..</span>
+                    </div>
+                </div>
+                <button class="btn-salvar">
+                    Salvar
+                </button>
+            </form>
         </section>
 
     </main>
