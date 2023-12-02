@@ -17,6 +17,7 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
 
     <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/metas.css" />
     <title>Home</title>
 </head>
 
@@ -45,7 +46,7 @@
             </button>
 
             <div class="sidebar">
-                <a href="#" class="active">
+                <a href="home.html">
                     <span class="material-symbols-rounded">dashboard</span>
                     <h4>Dashboard</h4>
                 </a>
@@ -61,7 +62,7 @@
                     <span class="material-symbols-rounded">bookmark</span>
                     <h4> Categorias</h4>
                 </a>
-                <a href="metas.html">
+                <a href="metas.html" class="active">
                     <span class="material-symbols-rounded">trophy</span>
                     <h4>Metas</h4>
                 </a>
@@ -77,11 +78,120 @@
         </aside>
 
         <section class="section-metas">
-            
+            <div class="container-educacao">
+                <details>
+                    <summary>educação</summary>
+                    <div class="saldo">
+                        <span>Meta:</span>
+                        <p>R$600,00</p> <br>
+                        <span>Já gastou:</span>
+                        <p>R$290,00</p> <br>
+                        <span>Limite ultrapassado:</span>
+                        <p>R$0,00</p>
+                    </div>
+                    <div class="barra">
+                        <div class="progresso-educacao"></div>
+                    </div>
+                    <input type="number" data-progresso="progresso-educacao" onkeyup="alterarProgresso('progresso-educacao')" />
+                </details>
+            </div>
+            <div class="container-laser">
+                <details>
+                    <summary>laser</summary>
+                    <div class="saldo">
+                        <span>Meta:</span>
+                        <p>R$600,00</p> <br>
+                        <span>Já gastou:</span>
+                        <p>R$290,00</p> <br>
+                        <span>Limite ultrapassado:</span>
+                        <p>R$0,00</p>
+                    </div>
+                    <div class="barra">
+                        <div class="progresso-laser"></div>
+                    </div>
+                    <input type="number" data-progresso="progresso-laser" onkeyup="alterarProgresso('progresso-laser')" />
+                </details>
+            </div>
+            <div class="container-saude">
+                <details>
+                    <summary>saúde</summary>
+                    <div class="saldo">
+                        <span>Meta:</span>
+                        <p>R$600,00</p> <br>
+                        <span>Já gastou:</span>
+                        <p>R$290,00</p> <br>
+                        <span>Limite ultrapassado:</span>
+                        <p>R$0,00</p>
+                    </div>
+                    <div class="barra">
+                        <div class="progresso-saude"></div>
+                    </div>
+                    <input type="number" data-progresso="progresso-saude" onkeyup="alterarProgresso('progresso-saude')" />
+                </details>
+            </div>
+            <div class="container-transporte">
+                <details>
+                    <summary>transporte</summary>
+                    <div class="saldo">
+                        <span>Meta:</span>
+                        <p>R$600,00</p> <br>
+                        <span>Já gastou:</span>
+                        <p>R$290,00</p> <br>
+                        <span>Limite ultrapassado:</span>
+                        <p>R$0,00</p>
+                    </div>
+                    <div class="barra">
+                        <div class="progresso-transporte"></div>
+                    </div>
+                    <input type="number" data-progresso="progresso-transporte" onkeyup="alterarProgresso('progresso-transporte')" />
+                </details>
+            </div>
+            <div class="container-contas-a-pagar">
+                <details>
+                    <summary>contas a pagar</summary>
+                    <div class="saldo">
+                        <span>Meta:</span>
+                        <p>R$600,00</p> <br>
+                        <span>Já gastou:</span>
+                        <p>R$290,00</p> <br>
+                        <span>Limite ultrapassado:</span>
+                        <p>R$0,00</p>
+                    </div>
+                    <div class="barra">
+                        <div class="progresso-contas"></div>
+                    </div>
+                    <input type="number" data-progresso="progresso-contas" onkeyup="alterarProgresso('progresso-contas')" />
+            </div>
+            <div class="container-mercado">
+                <details>
+                    <summary>mercado</summary>
+                    <div class="saldo">
+                        <span>Meta:</span>
+                        <p>R$600,00</p> <br>
+                        <span>Já gastou:</span>
+                        <p>R$290,00</p> <br>
+                        <span>Limite ultrapassado:</span>
+                        <p>R$0,00</p>
+                    </div>
+                    <div class="barra">
+                        <div class="progresso-mercado"></div>
+                    </div>
+                    <input type="number" data-progresso="progresso-mercado" onkeyup="alterarProgresso('progresso-mercado')" />
+            </div>
         </section>
 
     </main>
 
+    <script>
+        const alterarProgresso = (classeProgresso) => {
+            const barra = document.querySelector(`.${classeProgresso} .barra .${classeProgresso}`);
+            const input = document.querySelector(`input[data-progresso="${classeProgresso}"]`);
+    
+            if (barra && input) {
+                barra.style.width = input.value + "%";
+            }
+        };
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
