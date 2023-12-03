@@ -18,7 +18,7 @@
 
     <link rel="stylesheet" href="css/home.css" />
     <link rel="stylesheet" href="css/metas.css" />
-    <title>Home</title>
+    <title>Metas</title>
 </head>
 
 <body>
@@ -78,6 +78,7 @@
         </aside>
 
         <section class="section-metas">
+            <!-- Seção Educação -->
             <div class="container-educacao">
                 <details>
                     <summary>educação</summary>
@@ -90,11 +91,14 @@
                         <p>R$0,00</p>
                     </div>
                     <div class="barra">
-                        <div class="progresso-educacao"></div>
+                        <div class="progresso-educacao" style="width: 45%;"></div>
                     </div>
-                    <input type="number" data-progresso="progresso-educacao" onkeyup="alterarProgresso('progresso-educacao')" />
+                    <!-- se quiser mecher nanualmente por porcentagem  -->
+                    <!-- <input type="number" data-progresso="progresso-educacao" value="50" onkeyup="alterarProgresso('progresso-educacao', this.value)" /> -->
                 </details>
             </div>
+
+            <!-- Seção Laser -->
             <div class="container-laser">
                 <details>
                     <summary>laser</summary>
@@ -107,11 +111,15 @@
                         <p>R$0,00</p>
                     </div>
                     <div class="barra">
-                        <div class="progresso-laser"></div>
+                        <div class="progresso-laser" style="width: 30%;"></div>
                     </div>
-                    <input type="number" data-progresso="progresso-laser" onkeyup="alterarProgresso('progresso-laser')" />
+                    <!-- se quiser mecher nanualmente por porcentagem  -->
+                    <!-- <input type="number" data-progresso="progresso-laser"
+                        onkeyup="alterarProgresso('progresso-laser', this.value)" /> -->
                 </details>
             </div>
+
+            <!-- Seção Saúde -->
             <div class="container-saude">
                 <details>
                     <summary>saúde</summary>
@@ -124,11 +132,15 @@
                         <p>R$0,00</p>
                     </div>
                     <div class="barra">
-                        <div class="progresso-saude"></div>
+                        <div class="progresso-saude" style="width: 50%;"></div>
                     </div>
-                    <input type="number" data-progresso="progresso-saude" onkeyup="alterarProgresso('progresso-saude')" />
+                    <!-- se quiser mecher nanualmente por porcentagem  -->
+                    <!-- <input type="number" data-progresso="progresso-saude"
+                        onkeyup="alterarProgresso('progresso-saude', this.value)" /> -->
                 </details>
             </div>
+
+            <!-- Seção Transporte -->
             <div class="container-transporte">
                 <details>
                     <summary>transporte</summary>
@@ -141,11 +153,14 @@
                         <p>R$0,00</p>
                     </div>
                     <div class="barra">
-                        <div class="progresso-transporte"></div>
+                        <div class="progresso-transporte" style="width: 90%;"></div>
                     </div>
-                    <input type="number" data-progresso="progresso-transporte" onkeyup="alterarProgresso('progresso-transporte')" />
+                    <!-- se quiser mecher nanualmente por porcentagem  -->
+                    <!-- <input type="number" data-progresso="progresso-transporte"
+                        onkeyup="alterarProgresso('progresso-transporte', this.value)" /> -->
                 </details>
             </div>
+            <!-- Seção Contas a Pagar -->
             <div class="container-contas-a-pagar">
                 <details>
                     <summary>contas a pagar</summary>
@@ -158,10 +173,15 @@
                         <p>R$0,00</p>
                     </div>
                     <div class="barra">
-                        <div class="progresso-contas"></div>
+                        <div class="progresso-contas" style="width: 70%;"></div>
                     </div>
-                    <input type="number" data-progresso="progresso-contas" onkeyup="alterarProgresso('progresso-contas')" />
+                    <!-- se quiser mecher nanualmente por porcentagem  -->
+                    <!-- <input type="number" data-progresso="progresso-contas"
+                        onkeyup="alterarProgresso('progresso-contas', this.value)" /> -->
+                </details>
             </div>
+
+            <!-- Seção Mercado -->
             <div class="container-mercado">
                 <details>
                     <summary>mercado</summary>
@@ -174,21 +194,27 @@
                         <p>R$0,00</p>
                     </div>
                     <div class="barra">
-                        <div class="progresso-mercado"></div>
+                        <div class="progresso-mercado" style="width: 10%;"></div>
                     </div>
-                    <input type="number" data-progresso="progresso-mercado" onkeyup="alterarProgresso('progresso-mercado')" />
+                    <!-- se quiser mecher nanualmente por porcentagem  -->
+                    <!-- <input type="number" data-progresso="progresso-mercado"
+                        onkeyup="alterarProgresso('progresso-mercado', this.value)" /> -->
+                </details>
             </div>
         </section>
 
     </main>
 
     <script>
-        const alterarProgresso = (classeProgresso) => {
-            const barra = document.querySelector(`.${classeProgresso} .barra .${classeProgresso}`);
-            const input = document.querySelector(`input[data-progresso="${classeProgresso}"]`);
-    
-            if (barra && input) {
-                barra.style.width = input.value + "%";
+        const alterarProgresso = (classeProgresso, valor) => {
+            const barra = document.querySelector(`.${classeProgresso}`);
+        
+            if (barra) {
+                // Garante que o valor não ultrapasse 100%
+                valor = Math.min(valor, 0);
+                valor = Math.max(valor, 100); // Garante que o valor não seja menor que 0
+        
+                barra.style.width = valor + "%";
             }
         };
     </script>
