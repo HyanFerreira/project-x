@@ -1,11 +1,12 @@
 .section-metas {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-size: 18px;
     gap: 20px;
     cursor: pointer;
 }
 
 .saldo {
+    margin-top:auto;
     margin-left: 50px;
     align-items: center;
 }
@@ -18,48 +19,48 @@ p {
     background-color: #2f75d0;
     margin-right: 40%;
     margin-top: 20px;
-    border-radius: 5px;
-    padding: 10px 0 10px 30px;
+    border-radius: 20px;
+    padding: 10px 0px 10px 30px;
 }
 
 .container-laser {
     background-color: #2f75d0;
     margin-right: 40%;
     margin-top: 20px;
-    border-radius: 5px;
-    padding: 10px 0 10px 30px;
+    border-radius: 20px;
+    padding: 10px 0px 10px 30px;
 }
 
 .container-saude {
     background-color: #2f75d0;
     margin-right: 40%;
     margin-top: 20px;
-    border-radius: 5px;
-    padding: 10px 0 10px 30px;
+    border-radius: 20px;
+    padding: 10px 0px 10px 30px;
 }
 
 .container-transporte {
     background-color: #2f75d0;
     margin-right: 40%;
     margin-top: 20px;
-    border-radius: 5px;
-    padding: 10px 0 10px 30px;
+    border-radius: 20px;
+    padding: 10px 0px 10px 30px;
 }
 
 .container-contas-a-pagar {
     background-color: #2f75d0;
     margin-right: 40%;
     margin-top: 20px;
-    border-radius: 5px;
-    padding: 10px 0 10px 30px;
+    border-radius: 20px;
+    padding: 10px 0px 10px 30px;
 }
 
 .container-mercado {
     background-color: #2f75d0;
     margin-right: 40%;
-    margin-top: 20px;
-    border-radius: 5px;
-    padding: 10px 0 10px 30px;
+    margin-top:20px;
+    border-radius: 20px;
+    padding: 10px 0px 10px 30px;
 }
 
 summary::-webkit-details-marker {
@@ -79,6 +80,7 @@ details[open] summary::before {
 }
 
 .barra {
+    margin-top: 20px;
     width: 90%;
     height: 90%;
     border-radius: 10px;
@@ -92,4 +94,20 @@ details[open] summary::before {
     border-radius: 10px;
     background-color: #3ACFEF;
     transition: all 300ms;
+}
+
+.banner {
+    justify-content: flex-end;
+    margin-right: 40px;
+    display: flex;
+
+}
+
+.banner img {
+    width: auto;
+}
+
+.banner {
+    display: flex;
+    cursor: pointer;
 }
